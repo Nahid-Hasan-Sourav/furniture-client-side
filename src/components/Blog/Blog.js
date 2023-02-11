@@ -78,6 +78,9 @@ const Blog = () => {
             </div>
           </div>
         </div>
+    <div className='text-center my-8'>
+    <button className='btn btn-outline'>VIEW ALL BLOG</button>
+    </div>
       </div>
     );
 };
