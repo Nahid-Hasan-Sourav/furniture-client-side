@@ -1,6 +1,8 @@
 import React from 'react';
 import AllCollection from '../../components/AllCollection/AllCollection';
 import Banner from '../../components/BannerSlider/Banner';
+import Blog from '../../components/Blog/Blog';
+import Discount from '../../components/Discount/Discount';
 
 
 const Home = () => {
@@ -8,6 +10,8 @@ const Home = () => {
         <div className='container-fluid'>
             <Banner/>
             <AllCollection/>
+            <Discount/>
+            <Blog/>
             
         </div>
     );
