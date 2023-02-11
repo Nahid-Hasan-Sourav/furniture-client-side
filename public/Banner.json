@@ -1,0 +1,29 @@
+[
+    {
+        "subTitle":"Simple & Modern",
+        "title":"Inoterior",
+        "UpTo":"UP TO",
+        "rightText":"Off Everything",
+        "discount":"60 %",
+        "bannerImg":"https://i.ibb.co/9Hj26W8/banner-1.png"
+
+    },
+    {
+        "subTitle":"Simple & Modern",
+        "title":"Inoterior",
+        "UpTo":"UP TO",
+        "rightText":"Off Everything",
+        "discount":"70 %",
+        "bannerImg":"https://i.ibb.co/PWZvdcm/Banner-2.jpg"
+
+    },
+    {
+        "subTitle":"Drawing Room",
+        "title":"Inoterior",
+        "UpTo":"UP TO",
+        "rightText":"Off Everything",
+        "discount":"67 %",
+        "bannerImg":"https://i.ibb.co/tB4myyB/banner-3.jpg"
+
+    }
+]
