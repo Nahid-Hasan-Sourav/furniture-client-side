@@ -17,7 +17,7 @@ const CollectionSlider = () => {
         .then(res => res.json())
         .then(data=>setcollectionData(data))
     },[])
-    console.log("All Data for another slider",collectionData)
+    // console.log("All Data for another slider",collectionData)
     
     return (
         <div>

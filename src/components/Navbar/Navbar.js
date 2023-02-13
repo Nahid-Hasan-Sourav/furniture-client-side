@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import search from '../../Assets/icon/search.png';
-import user from '../../Assets/icon/user.png';
+import userIcon from '../../Assets/icon/user.png';
 import cart from '../../Assets/icon/shopping-online 1.png'
+import { AuthContext } from '../../context/AuthProvider';
 
 const Navbar = () => {
+    const{user}=useContext(AuthContext)
 
     const menuItem=(
        <>
@@ -20,6 +22,7 @@ const Navbar = () => {
         <li className="text-black">
           <Link to="/" className=''>CONTACT US</Link>
         </li>
+        
       
       </>
     )
@@ -64,7 +67,7 @@ const Navbar = () => {
           </button>
           <button className="mr-5">
             <Link to="/login">
-              <img src={user} alt="search" />
+              <img src={userIcon} alt="search" />
             </Link>
           </button>
           <button className="mr-5">

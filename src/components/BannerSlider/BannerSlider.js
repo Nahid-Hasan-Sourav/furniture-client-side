@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 const BannerSlider = ({bannerData}) => {
-    console.log("slider",bannerData)
+    // console.log("slider",bannerData)
 
 
     return (
