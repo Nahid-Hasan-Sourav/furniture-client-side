@@ -75,7 +75,9 @@ const Login = () => {
                 <div className="text-center mt-3">
                     <Link to='/signIn'><span>Create account </span></Link>
                     <span className='mx-3'>/ </span>
+                    <Link to='/forgot-password'>
                     <span>Forgot your password? </span>
+                    </Link>
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
