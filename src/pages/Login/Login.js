@@ -1,10 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 
 const Login = () => {
   const{currentUser,setcurrentUser}=useContext(AuthContext)
+  console.log("This is navbar",currentUser)
+  // const[user,setUser]=useState(null)
+  // useEffect(()=>{
+  //   const newST = JSON.parse(localStorage.getItem("loginUser"));
+  //   console.log("From local storage",newST)
+  //   setcurrentUser(newST)
+  //   // setcurrentUser(user)
+  // },[])
   const navigate=useNavigate()
   const handleLogin=(e)=>{
     e.preventDefault();
@@ -17,7 +25,9 @@ const Login = () => {
       password
     }
 
-    console.log("Testing login",loginInfo)
+    
+
+    // console.log("Testing login",loginInfo)
     fetch("http://localhost:5000/user-login",
         {
           method:"POST",
@@ -28,19 +38,22 @@ const Login = () => {
         })
         .then((res)=>res.json())
         .then((data)=>{
-          if(data.success){
-            setcurrentUser(data.userInfo)
+          if(data.success){    
+            localStorage.setItem('loginUser', JSON.stringify(data.user))          
             toast.success(data.message)
             form.reset();
+            const newST = JSON.parse(localStorage.getItem("loginUser"));
+            console.log("From local storage",newST)
+            setcurrentUser(newST)
             navigate('/')
-            // console.log("Current User ",data.userInfo)
+           
           }
-          console.log("Log in data check the data : ",data)
+          console.log("Log in data check the data from login page : ",data.user)
         })
 
        
   }
-  console.log("This is actually login info : ",currentUser)
+  console.log("This is actually login info from local storage : ",currentUser)
     return (
       <div>
         <div className="hero min-h-screen ">

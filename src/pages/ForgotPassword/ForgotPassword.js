@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ForgotPassword = () => {
-
+    const navigate=useNavigate()
     const handleLogin=(e)=>{
         e.preventDefault();
         const form=e.target;
@@ -16,7 +17,25 @@ const ForgotPassword = () => {
 
         // console.log("Recover Password : ",recoverPass);
 
-        
+        fetch("http://localhost:5000/forgot-password",
+        {
+          method:"PUT",
+          headers:{
+            "content-type" : "application/json",
+          },
+          body:JSON.stringify(recoverPass),
+        })
+        .then((res)=>res.json())
+        .then((data)=>{
+          if(data.result.matchedCount>0){
+            // setcurrentUser(data.userInfo)
+            toast.success(data.message)
+            form.reset();
+            navigate('/login')
+            // console.log("Current User ",data.userInfo)
+          }
+          console.log("Log in data check the data : ",data)
+        })
 
     }
 
@@ -55,7 +74,7 @@ const ForgotPassword = () => {
                     
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary">Login</button>
+                  <button className="btn btn-primary">SUBMIT</button>
                 </div>
               </form>
             </div>

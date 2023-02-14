@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
+import AllUser from "../../pages/AllUser/AllUser";
 import ForgotPassword from "../../pages/ForgotPassword/ForgotPassword";
 import Home from "../../pages/Home/Home";
 import Login from "../../pages/Login/Login";
@@ -26,6 +27,10 @@ export const router=createBrowserRouter([
             {
                 path:'/forgot-password',
                 element:<ForgotPassword></ForgotPassword>
+            },
+            {
+                path:'/all-user',
+                element:<AllUser/>
             }
         ]
     }
