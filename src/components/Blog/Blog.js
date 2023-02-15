@@ -35,7 +35,7 @@ const Blog = () => {
               <div className="flex flex-col lg:flex-row">
                 <img
                   src={rightOne}
-                  className="w-[351px] h-[200px] rounded-lg shadow-2xl"
+                  className="md:w-[351px] w-[100%] h-[200px] rounded-lg shadow-2xl"
                 />
                 <div className='px-2'>
                   <small className="">16 May, 2022</small>
@@ -50,7 +50,7 @@ const Blog = () => {
               <div className="flex flex-col lg:flex-row">
                 <img
                   src={rightOne}
-                  className="w-[351px] h-[200px] rounded-lg shadow-2xl"
+                  className="md:w-[351px] w-[100%] h-[200px] rounded-lg shadow-2xl"
                 />
                 <div className='px-2'>
                   <small className="">16 May, 2022</small>
@@ -65,7 +65,7 @@ const Blog = () => {
               <div className="flex flex-col lg:flex-row">
                 <img
                   src={rightOne}
-                  className="w-[351px] h-[200px] rounded-lg shadow-2xl"
+                  className="md:w-[351px] w-[100%] h-[200px] rounded-lg shadow-2xl"
                 />
                 <div className='px-2'>
                   <small className="">16 May, 2022</small>

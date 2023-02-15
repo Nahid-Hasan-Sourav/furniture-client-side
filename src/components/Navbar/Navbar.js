@@ -4,6 +4,8 @@ import search from '../../Assets/icon/search.png';
 import userIcon from '../../Assets/icon/user.png';
 import cart from '../../Assets/icon/shopping-online 1.png'
 import { AuthContext } from '../../context/AuthProvider';
+import Marque from '../Marque/Marque';
+import logo from '../../Assets/img/furnitureLOgo.png'
 
 const Navbar = () => {
     const{currentUser,userRole}=useContext(AuthContext)
@@ -36,8 +38,10 @@ console.log("User loged in from navbar : ",currentUser)
       </>
     )
     return (
-      <div className="bg-[#F0F0F0] sticky top-0 z-10">
-        <div className="navbar border-2 border-red container mx-auto">
+      <>
+       <Marque/>
+        <div className="bg-[#F0F0F0] sticky top-0 z-10">
+        <div className="navbar border-2 border-red container mx-auto sticky top-0 z-10">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -68,7 +72,11 @@ console.log("User loged in from navbar : ",currentUser)
             </div>
           </div>
           <div className="lg:navbar-center">
-            <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+            
+              <img src={logo} alt='logo'
+              className='h-[55px]'
+              />
+            
           </div>
           <div className="navbar-end">
             <button className="mr-5">
@@ -131,6 +139,7 @@ console.log("User loged in from navbar : ",currentUser)
           </div>
         </div>
       </div>
+      </>
     );
 };
 
