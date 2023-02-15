@@ -34,7 +34,7 @@ const BannerSlider = ({bannerData}) => {
             >
 
                 {
-                    bannerData?.slice(0,1).map((data,index)=>{
+                    bannerData?.map((data,index)=>{
                         return (
                           <SwiperSlide>
                             <div className="relative">
