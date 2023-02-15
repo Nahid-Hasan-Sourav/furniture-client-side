@@ -34,7 +34,7 @@ const BannerSlider = ({bannerData}) => {
             >
 
                 {
-                    bannerData?.map((data,index)=>{
+                    bannerData?.slice(0,1).map((data,index)=>{
                         return (
                           <SwiperSlide>
                             <div className="relative">
@@ -43,14 +43,14 @@ const BannerSlider = ({bannerData}) => {
                               src={data.bannerImg}
                               alt=" slide 1"
                             />
-                            <div className="text ml-[140px]">
+                            <div className="text md:ml-[140px] lg:px-[0px] px-[10%]">
 
-                                <p className="absolute z-10 top-[13%] text-white font-extrabold font- text-4xl p-5 font-Inter">{data.subTitle}</p>
-                                <h1 className="absolute z-10 top-[28%] text-white font-Inter font-extrabold font- text-7xl bg-gray-900 p-5">{data.title}</h1>
-                                <p className="transform -rotate-90 bg-black p-2 left-[10.19%] absolute z-10 top-[56%] text-white font-extrabold tracking-[3px]">UP TO</p>
+                                <p className="absolute z-10 top-[16%] text-white font-extrabold text-3xl  p-3 font-Inter">{data.subTitle}</p>
+                                <h1 className="absolute z-10 top-[28%] text-white font-Inter font-extrabold  text-7xl  bg-gray-900 p-5">{data.title}</h1>
+                                <p className="transform -rotate-90 bg-black p-2 lg:left-[10%] md:left-[11.8%] top-[57%] absolute z-10 text-white font-extrabold tracking-[3px]">UP TO</p>
                                 <div className="">
-                                  <h1 className="absolute z-10 top-[50%] text-white font-Inter font-extrabold font- text-8xl pl-14 ml-2">{data.discount}</h1>
-                                  <p className="absolute z-10 top-[53%] left-[35%] text-white font-extrabold text-lg">Off <br></br> Everything</p>
+                                  <h1 className="absolute z-10 top-[51%] text-white font-Inter font-extrabold text-8xl pl-14 ml-2">{data.discount}</h1>
+                                  <p className="absolute z-10 lg:top-[54%] lg:left-[36%] md:left-[37%] text-white font-extrabold text-lg lg:flex hidden">Off <br></br> Everything</p>
                                 </div>
                             </div>
                             </div>
